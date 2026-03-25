@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DONS-DEALER | SOVEREIGN QUAD-MATRIX</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --obsidian: #050505;
+            --cobalt: #2e5bff;
+            --gold: #ffcc00;
+            --glass: rgba(15, 15, 15, 0.95);
+            --text: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .light-mode {
+            --obsidian: #e8e8e8;
+            --glass: rgba(255, 255, 255, 0.95);
+            --text: #121212;
+            --cobalt: #003cc7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--obsidian);
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                              url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2000');
+            background-size: cover;
+            background-attachment: fixed;
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: var(--glass); border-bottom: 2px solid var(--cobalt);
+            position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(15px);
+        }
+
+        .brand { font-family: 'Syncopate'; font-size: 1.4rem; letter-spacing: 4px; color: var(--gold); }
+
+        .master-container { max-width: 1400px; margin: 120px auto 100px; padding: 0 20px; }
+
+        /* 2x2 QUAD ALGORITHM */
+        .quad-matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .sectional {
+            background: var(--glass);
+            border: 1px solid var(--cobalt);
+            padding: 35px;
+            height: 550px;
+            overflow-y: auto;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+            transition: var(--transition);
+        }
+
+        .sectional:hover { border-color: var(--gold); transform: translateY(-5px); }
+
+        /* Shapes */
+        .shape { position: absolute; opacity: 0.15; z-index: 0; pointer-events: none; }
+        .sq { width: 80px; height: 80px; border: 2px solid var(--gold); top: 5%; right: 5%; }
+        .ci { width: 100px; height: 100px; border: 2px solid var(--cobalt); border-radius: 50%; bottom: 5%; left: 5%; }
+        .tr { width: 0; height: 0; border-left: 40px solid transparent; border-right: 40px solid transparent; border-bottom: 70px solid var(--gold); bottom: 10%; right: 10%; }
+
+        h2 { font-family: 'Syncopate'; color: var(--gold); margin-bottom: 15px; border-bottom: 1px solid var(--cobalt); padding-bottom: 10px; }
+        
+        .alert-pulse { background: var(--gold); color: #000; padding: 8px; font-weight: 900; text-align: center; margin-bottom: 20px; font-size: 0.8rem; }
+
+        /* Form Styling */
+        .secure-node {
+            background: var(--glass);
+            padding: 50px;
+            border: 2px solid var(--gold);
+            margin-top: 40px;
+        }
+
+        .input-group { margin-bottom: 20px; }
+        label { display: block; font-family: 'Syncopate'; font-size: 0.7rem; color: var(--gold); margin-bottom: 8px; }
+        input, select, textarea {
+            width: 100%; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid var(--cobalt); color: #fff; font-family: inherit;
+        }
+
+        .submit-btn {
+            width: 100%; padding: 20px; background: var(--cobalt); color: #fff; border: none; font-family: 'Syncopate'; cursor: pointer; transition: 0.3s;
+        }
+        .submit-btn:hover { background: var(--gold); color: #000; }
+
+        .masked-contact {
+            text-align: center; padding: 40px; margin-top: 20px; border: 1px dashed var(--cobalt);
+        }
+
+        .decrypt-trigger { color: var(--gold); cursor: pointer; font-weight: 900; text-decoration: underline; font-size: 1.2rem; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: var(--cobalt); }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand">DONS DEALER</div>
+    <div style="display:flex; gap:15px;">
+        <button onclick="document.body.classList.toggle('light-mode')" style="cursor:pointer; background:none; border:1px solid var(--gold); color:var(--gold); padding:5px 10px;">MODE</button>
+        <div id="lang-toggle" style="font-family:'Syncopate'; font-size: 0.8rem; cursor:pointer;">EN | FR</div>
+    </div>
+</header>
+
+<div class="master-container">
+
+    <div class="quad-matrix">
+        <div class="sectional">
+            <div class="shape sq"></div>
+            <h2>METH</h2>
+            <div class="alert-pulse">STAY HYDRATED - DRINK WATER</div>
+            <p><strong>Logistics:</strong> Heavy-duty urban restoration and chemical byproduct detouring.</p><br>
+            <p><strong>Price:</strong> rates applied per unit of point to point scaling. $25-$150 Base.</p><br>
+            <p><strong>How to use:</strong> Identify high-impact industrial zones. Deploy neutralizers. Stay hydrated during 12-hour recovery shifts.</p><br>
+            <p><strong>Effect:</strong> Total site sterilization and 2026-standard civic clarity.</p>
+        </div>
+
+        <div class="sectional">
+            <div class="shape ci"></div>
+            <h2>COKE</h2>
+            <div class="alert-pulse">RESTEZ HYDRATÉ - BUVEZ DE L'EAU</div>
+            <p><strong>Logistics:</strong> High-speed white-label cleansing for commercial facades.</p><br>
+            <p><strong>Price:</strong> $50-$300 Premium Tier. BTC accepted for instant logistics initiation.</p><br>
+            <p><strong>How to use:</strong> Apply to high-traffic business sectors. Rapid-response protocol only. Ensure 500ml water per 30 mins of operation.</p><br>
+            <p><strong>Effect:</strong> Immediate aesthetic restoration of Vancouver's financial nodes.</p>
+        </div>
+
+        <div class="sectional">
+            <div class="shape tr"></div>
+            <h2>MUSH</h2>
+            <div class="alert-pulse">STAY HYDRATED - DRINK WATER</div>
+            <p><strong>Logistics:</strong> Biological management and organic detour cycles. Fascination amongst hearing amd seeing a magical perspective. relaxation and a feeling of comfort!</p><br>
+            <p><strong>Price:</strong> $20-$150 Subscription-based organic recovery.</p><br>
+            <p><strong>How to use:</strong> Targeted at residential Seawall corridors. Natural acceleration of endorphins to create a flow of designed relaxation.</p><br>
+            <p><strong>Effect:</strong> Ecosystem balance restoration through safe organic processing.</p>
+        </div>
+
+        <div class="sectional">
+            <div class="shape sq" style="transform: rotate(45deg);"></div>
+            <h2>CRACK</h2>
+            <div class="alert-pulse">RESTEZ HYDRATÉ - BUVEZ DE L'EAU</div>
+            <p><strong>Logistics:</strong> Deep-set structural grime removal from urban alleyways. Alleyways and their lethal drugs stop the crisis!!</p><br>
+            <p><strong>Price:</strong> $20-$250 per order quadrant.</p><br>
+            <p><strong>How to use:</strong> Heat-mapped cleaning of DTES core surfaces. High-pressure steam detouring.</p><br>
+            <p><strong>Effect:</strong> Removal of permanent urban pollutants and structural residue. Get the pure clean brick snap crackle pop!!</p>
+        </div>
+    </div>
+
+    <div class="sectional" style="height: 300px; width: 100%; margin-bottom: 40px;">
+        <h2>MISSION STATEMENT</h2>
+        <p>Donalds Dealer is a settling into authority in Lower Mainland restoration. Operating within a decentralized super-intelligence framework, we ensure the absolute detoxification of urban environments. Since 2026, our mission has been to provide safe, clean, and cheap logistical detouring for hazardous materials. We honor the Satoshi mask—representing privacy, precision, and the power of the individual. Our dope circle of service ensures that Vancouver remains a beacon of civic beauty. No one should die celebrating or enjoying a high, so safe organized supply.</p>
+    </div>
+
+    <section class="secure-node">
+        <h2 style="text-align: center;">DESCRIPTIVE SUPPLY</h2>
+        <form action="https://formspree.io/f/mlgorpkn" method="POST">
+            <div class="quad-matrix" style="grid-gap: 15px; margin-top: 30px;">
+                <div class="input-group">
+                    <label>Select Detouring Type</label>
+                    <select name="type">
+                        <option>METH MOSIAC</option>
+                        <option>COKE DOPE</option>
+                        <option>MUSH ORGANIC</option>
+                        <option>CRACK RELAXATION</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Amount / Volume</label>
+                    <input type="text" name="amount" placeholder="e.g. 50 Units / 2 Metric Tons">
+                </div>
+                <div class="input-group">
+                    <label>Your Customer Email</label>
+                    <input type="text" name="location" placeholder="e.g. DTES / Seawall / Richmond">
+                </div>
+                <div class="input-group">
+                    <label>Target Price Point</label>
+                    <input type="text" name="price" placeholder="Requesting Quote in BTC/XMR">
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Secure Message / Arrangements</label>
+                <textarea name="details" rows="4" placeholder="DESCRIBE YOUR ARRANGEMENT NEEDS..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">INITIATE SECURE TRANSACTION</button>
+        </form>
+    </section>
+
+    <div class="masked-contact">
+        <h3 style="font-family:'Syncopate'; font-size: 0.8rem; margin-bottom: 15px;">SECURE CELLULAR LINK</h3>
+        <p id="phone-display" class="decrypt-trigger" onclick="decryptPhone()">[DECRYPT SECURE LINE]</p>
+    </div>
+
+</div>
+
+<script>
+    function decryptPhone() {
+        const node = document.getElementById('phone-display');
+        node.innerText = "1-236-234-4205";
+        node.style.color = "var(--cobalt)";
+        node.classList.remove('decrypt-trigger');
+    }
+</script>
+
+</body>
+</html>
